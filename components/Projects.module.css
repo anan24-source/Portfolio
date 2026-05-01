@@ -1,0 +1,95 @@
+.projects {}
+
+.header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 32px 28px;
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.cardContent {
+  flex-grow: 1;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.folderIcon {
+  font-size: 36px;
+  opacity: 0.8;
+}
+
+.links {
+  display: flex;
+  gap: 12px;
+}
+
+.link {
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-accent-primary);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.tech {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.card:hover .title {
+  color: var(--color-accent-primary);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

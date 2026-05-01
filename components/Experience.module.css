@@ -1,0 +1,150 @@
+.experience {}
+
+.header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.item {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 40px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-border-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent-primary);
+  z-index: 1;
+  transition: all var(--transition-base);
+}
+
+.item:hover .marker {
+  background: var(--color-accent-primary);
+  color: #fff;
+  border-color: var(--color-accent-primary);
+  box-shadow: var(--glow-primary);
+}
+
+.card {
+  padding: 32px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.date {
+  padding: 6px 14px;
+  background: rgba(0, 194, 255, 0.08);
+  color: var(--color-accent-primary);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.description {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--color-text-secondary);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.description li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: var(--color-text-muted);
+  border-radius: 50%;
+}
+
+.highlight {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--color-border);
+  color: var(--color-accent-primary);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+@media (max-width: 640px) {
+  .line {
+    left: 20px;
+  }
+  
+  .item {
+    padding-left: 56px;
+  }
+
+  .marker {
+    width: 40px;
+    height: 40px;
+    left: 0;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+  
+  .cardHeader {
+    flex-direction: column;
+  }
+}
