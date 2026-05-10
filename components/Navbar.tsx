@@ -2,17 +2,19 @@
 
 import { useEffect, useRef, useState } from 'react'
 import styles from './Navbar.module.css'
+import { useLanguage } from '@/lib/language'
 
 const navLinks = [
-  { href: '#home',       label: 'Home' },
-  { href: '#about',      label: 'About' },
-  { href: '#skills',     label: 'Skills' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects',   label: 'Projects' },
-  { href: '#contact',    label: 'Contact' },
+  { href: '#home',       label: { en: 'Home', th: 'หน้าหลัก' } },
+  { href: '#about',      label: { en: 'About', th: 'เกี่ยวกับ' } },
+  { href: '#skills',     label: { en: 'Skills', th: 'สกิล' } },
+  { href: '#experience', label: { en: 'Experience', th: 'ประสบการณ์' } },
+  { href: '#projects',   label: { en: 'Projects', th: 'โปรเจกต์' } },
+  { href: '#contact',    label: { en: 'Contact', th: 'ติดต่อ' } },
 ]
 
 export default function Navbar() {
+  const { language, setLanguage } = useLanguage()
   const [scrolled, setScrolled]         = useState(false)
   const [active, setActive]             = useState('home')
   const [menuOpen, setMenuOpen]         = useState(false)
@@ -51,8 +53,8 @@ export default function Navbar() {
     >
       <div className={`${styles.inner} container`}>
         <a className={styles.logo} onClick={() => handleNavClick('#home')}>
-          <span className={styles.logoAccent}>AN</span>
-          <span>antachai</span>
+          <span className={styles.logoAccent}>AT</span>
+          <span>Portfolio</span>
         </a>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
@@ -62,16 +64,34 @@ export default function Navbar() {
               className={`${styles.navLink} ${active === link.href.slice(1) ? styles.navLinkActive : ''}`}
               onClick={() => handleNavClick(link.href)}
             >
-              {link.label}
+              {link.label[language]}
             </a>
           ))}
+          <div className={styles.languageSwitch} aria-label="Language switcher">
+            <button
+              type="button"
+              className={`${styles.languageButton} ${language === 'en' ? styles.languageButtonActive : ''}`}
+              onClick={() => setLanguage('en')}
+              aria-pressed={language === 'en'}
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              className={`${styles.languageButton} ${language === 'th' ? styles.languageButtonActive : ''}`}
+              onClick={() => setLanguage('th')}
+              aria-pressed={language === 'th'}
+            >
+              TH
+            </button>
+          </div>
           <a
             href="/resume/resume.html"
             target="_blank"
             rel="noopener noreferrer"
             className={`btn-primary ${styles.resumeBtn}`}
           >
-            Resume
+            {language === 'th' ? 'Resume' : 'Resume'}
           </a>
         </nav>
 

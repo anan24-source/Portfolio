@@ -2,7 +2,7 @@
 
 .header {
   text-align: center;
-  max-width: 600px;
+  max-width: 760px;
   margin: 0 auto 60px;
 }
 
@@ -12,99 +12,346 @@
   line-height: 1.7;
 }
 
-.grid {
+.aiPanel {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-.categoryCard {
-  padding: 36px 32px;
-}
-
-.categoryTitle {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-heading);
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 28px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.catIcon {
-  font-size: 22px;
-}
-
-.skillList {
-  display: flex;
-  flex-direction: column;
   gap: 18px;
+  padding: 24px 28px;
+  margin: -24px 0 34px;
 }
 
-.skillItem {}
-
-.skillHeader {
-  display: flex;
-  justify-content: space-between;
+.aiHeading {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
   align-items: center;
-  margin-bottom: 7px;
 }
 
-.skillName {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 500;
+.aiIcon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(124, 58, 237, 0.38);
+  border-radius: 12px;
+  color: #a78bfa;
+  background: rgba(124, 58, 237, 0.1);
+  box-shadow: 0 0 24px rgba(124, 58, 237, 0.12);
+}
+
+.aiHeading h3 {
+  margin: 0 0 6px;
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 700;
   color: var(--color-text-primary);
 }
 
-.skillIcon {
-  font-size: 16px;
+.aiHeading p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 14.5px;
+  line-height: 1.65;
 }
 
-.skillLevel {
-  font-size: 12px;
+.aiTags {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) minmax(190px, 240px);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.aiCompareCard {
+  display: grid;
+  align-content: flex-start;
+  gap: 8px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+  background: rgba(124, 58, 237, 0.055);
+}
+
+.aiCompareCard strong {
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: 14px;
+}
+
+.aiCompareCard span,
+.aiResult {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid rgba(124, 58, 237, 0.22);
+  border-radius: var(--radius-full);
+  background: rgba(124, 58, 237, 0.07);
+  color: var(--color-text-secondary);
+  font-size: 13px;
   font-weight: 600;
+}
+
+.aiCompareCard svg,
+.aiResult svg {
+  flex: 0 0 auto;
+  color: #a78bfa;
+}
+
+.aiEquals {
+  display: grid;
+  place-items: center;
+  min-width: 30px;
   color: var(--color-accent-primary);
-  font-variant-numeric: tabular-nums;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
 }
 
-.progressTrack {
-  height: 6px;
+.aiResult {
+  justify-content: center;
+  min-height: auto;
+  padding: 16px;
+  border-color: rgba(0, 194, 255, 0.28);
+  border-radius: 12px;
+  background: rgba(0, 194, 255, 0.075);
+  color: var(--color-text-primary);
+  text-align: center;
+}
+
+.trackGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.trackCard {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  min-height: 100%;
+}
+
+.trackHeader {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.trackIcon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(0, 194, 255, 0.35);
+  border-radius: 12px;
+  color: var(--color-accent-primary);
   background: rgba(0, 194, 255, 0.08);
-  border-radius: var(--radius-full);
-  overflow: hidden;
+  box-shadow: 0 0 22px rgba(0, 194, 255, 0.08);
 }
 
-.progressBar {
-  height: 100%;
-  background: var(--color-accent-gradient);
-  border-radius: var(--radius-full);
-  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+.trackHeader h3 {
+  margin: 0 0 6px;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text-primary);
+}
+
+.trackHeader p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.groupGrid {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
   position: relative;
 }
 
-.progressBar::after {
+.groupGrid::before {
   content: '';
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #00c2ff;
-  box-shadow: 0 0 8px rgba(0, 194, 255, 0.8);
+  top: 24px;
+  bottom: 24px;
+  left: 19px;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 194, 255, 0.45),
+    rgba(0, 194, 255, 0.08)
+  );
+}
+
+.skillGroup {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  align-items: start;
+  position: relative;
+}
+
+.layerIcon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 194, 255, 0.28);
+  border-radius: 10px;
+  background: rgba(5, 17, 34, 0.96);
+  color: var(--color-accent-primary);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 0 18px rgba(0, 194, 255, 0.08);
+}
+
+.layerIcon svg {
+  color: var(--color-accent-primary);
+}
+
+.layerContent {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  padding: 14px 16px 15px;
+  border: 1px solid rgba(0, 194, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(0, 194, 255, 0.025);
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-text-primary);
+}
+
+.groupTitle svg {
+  flex: 0 0 auto;
+  color: var(--color-accent-primary);
+}
+
+.groupTitle h4 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skillTags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 32px;
+  padding: 6px 11px;
+  border: 1px solid rgba(0, 194, 255, 0.18);
+  border-radius: var(--radius-full);
+  background: rgba(0, 194, 255, 0.06);
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.skillLogo {
+  flex: 0 0 auto;
+  color: var(--color-accent-primary);
 }
 
 @media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr; }
+  .trackGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .aiTags {
+    grid-template-columns: 1fr;
+  }
+
+  .aiEquals {
+    min-height: 24px;
+  }
 }
 
 @media (max-width: 480px) {
-  .categoryCard { padding: 24px 20px; }
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .trackCard {
+    padding: 24px 20px;
+  }
+
+  .aiPanel {
+    padding: 22px 18px;
+  }
+
+  .aiHeading {
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+  }
+
+  .aiIcon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .trackHeader {
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+  }
+
+  .trackIcon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .trackHeader h3 {
+    font-size: 18px;
+  }
+
+  .groupGrid {
+    gap: 12px;
+  }
+
+  .groupGrid::before {
+    left: 17px;
+  }
+
+  .skillGroup {
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+  }
+
+  .layerIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+  }
+
+  .layerContent {
+    padding: 13px 12px 14px;
+  }
+
+  .skillTags span {
+    white-space: normal;
+  }
 }

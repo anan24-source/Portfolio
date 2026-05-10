@@ -7,22 +7,196 @@
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 48px;
 }
 
 .textCol {}
 
+.personalSection,
+.professionalSection {
+  margin-top: 24px;
+}
+
+.personalSection {
+  padding-left: 18px;
+  border-left: 2px solid rgba(0, 194, 255, 0.28);
+}
+
+.professionalSection {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 64px;
+}
+
+.educationSection {
+  display: grid;
+  gap: 18px;
+  max-width: 920px;
+  margin: 0;
+  padding-left: 18px;
+  border-left: 2px solid rgba(0, 194, 255, 0.28);
+}
+
+.educationList {
+  display: grid;
+  gap: 18px;
+}
+
+.educationItem {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px;
+  gap: 6px;
+  column-gap: 20px;
+  align-items: center;
+  padding: 0;
+}
+
+.educationItem + .educationItem {
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 194, 255, 0.12);
+}
+
+.educationLogoWrap {
+  display: grid;
+  grid-column: 2;
+  grid-row: 1;
+  width: 96px;
+  height: 96px;
+  place-items: center;
+  border: 1px solid rgba(0, 194, 255, 0.16);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  overflow: hidden;
+}
+
+.educationLogo {
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+}
+
+.educationText {
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  gap: 6px;
+  min-width: 0;
+}
+
+.educationSection h4 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.educationSection p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+}
+
+.educationIntro {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.educationSchool {
+  color: var(--color-text-primary) !important;
+  font-size: 16px !important;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.educationSection span {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: var(--color-accent-primary);
+}
+
+.sectionHeading h3 {
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.personalSection p {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.personalList {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.personalItem {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.inlineIcon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(0, 194, 255, 0.16);
+  border-radius: var(--radius-sm);
+  color: var(--color-accent-primary);
+  background: rgba(0, 194, 255, 0.08);
+}
+
+.personalItem strong,
+.personalItem span {
+  display: block;
+}
+
+.personalItem strong {
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+}
+
+.personalItem span {
+  margin-top: 4px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .lead {
   font-size: 18px;
   color: var(--color-text-primary);
-  margin-bottom: 16px;
   line-height: 1.7;
 }
 
 .body {
   color: var(--color-text-secondary);
   line-height: 1.8;
-  margin-bottom: 28px;
+}
+
+.professionalIntro {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid rgba(0, 194, 255, 0.14);
+  border-radius: var(--radius-md);
+  background: rgba(10, 15, 30, 0.36);
 }
 
 .accent {
@@ -32,15 +206,21 @@
 
 .strengths {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
 
 .strengths li {
-  display: flex;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
   align-items: flex-start;
   gap: 12px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(0, 194, 255, 0.12);
+  border-radius: var(--radius-md);
+  background: rgba(10, 15, 30, 0.32);
   color: var(--color-text-secondary);
   font-size: 14.5px;
   line-height: 1.6;
@@ -51,9 +231,15 @@
 }
 
 .strengthIcon {
-  font-size: 18px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
   flex-shrink: 0;
-  margin-top: 1px;
+  color: var(--color-accent-primary);
+  border: 1px solid rgba(0, 194, 255, 0.16);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 194, 255, 0.08);
 }
 
 /* Image */
@@ -100,7 +286,25 @@
   box-shadow: var(--glow-primary);
 }
 
-.floatingIcon { font-size: 24px; }
+.floatingIcon {
+  position: relative;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: var(--color-accent-primary);
+  border: 1px solid rgba(0, 194, 255, 0.2);
+  border-radius: 50%;
+  background: rgba(0, 194, 255, 0.1);
+}
+
+.floatingIconBadge {
+  position: absolute;
+  right: -3px;
+  bottom: -2px;
+  color: #22c55e;
+  filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.35));
+}
 
 .floatingTitle {
   font-weight: 700;
@@ -116,7 +320,7 @@
 /* Stats */
 .statsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -126,8 +330,15 @@
 }
 
 .statIcon {
-  font-size: 28px;
+  display: inline-grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
   margin-bottom: 10px;
+  color: var(--color-accent-primary);
+  border: 1px solid rgba(0, 194, 255, 0.16);
+  border-radius: 50%;
+  background: rgba(0, 194, 255, 0.08);
 }
 
 .statValue {
@@ -145,6 +356,10 @@
   font-size: 13px;
   color: var(--color-text-secondary);
   font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .strengths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 1024px) {
@@ -169,8 +384,26 @@
   }
 
   .statsGrid { grid-template-columns: repeat(2, 1fr); }
+
+  .strengths { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-  .statsGrid { grid-template-columns: 1fr 1fr; }
+  .educationItem {
+    grid-template-columns: minmax(0, 1fr) 72px;
+    column-gap: 14px;
+  }
+
+  .educationLogoWrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+  }
+
+  .educationLogo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .statsGrid { grid-template-columns: 1fr; }
 }

@@ -7,6 +7,7 @@ import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import { supabase } from '@/lib/supabase'
+import { LanguageProvider } from '@/lib/language'
 
 export const revalidate = 3600 // revalidate every hour
 
@@ -33,15 +34,17 @@ export default async function Home() {
   }
 
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects initialProjects={projects} />
-      <Contact />
-      <Footer />
-    </main>
+    <LanguageProvider>
+      <main>
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects initialProjects={projects} />
+        <Contact />
+        <Footer />
+      </main>
+    </LanguageProvider>
   )
 }

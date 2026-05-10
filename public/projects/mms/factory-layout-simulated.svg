@@ -1,0 +1,124 @@
+<svg width="900" height="560" viewBox="0 0 900 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="14" y="14" width="872" height="532" rx="18" fill="#0F172A"/>
+  <rect x="28" y="30" width="844" height="500" rx="12" fill="url(#bg)"/>
+
+  <g stroke="#CBD5E1" stroke-width="2" fill="#F8FAFC">
+    <rect x="54" y="64" width="248" height="170" rx="10"/>
+    <rect x="326" y="64" width="248" height="170" rx="10"/>
+    <rect x="598" y="64" width="248" height="170" rx="10"/>
+    <rect x="54" y="258" width="248" height="220" rx="10"/>
+    <rect x="326" y="258" width="248" height="220" rx="10"/>
+    <rect x="598" y="258" width="248" height="220" rx="10"/>
+  </g>
+
+  <g opacity="0.5" fill="#CBD5E1">
+    <rect x="78" y="88" width="34" height="18" rx="3"/>
+    <rect x="122" y="88" width="34" height="18" rx="3"/>
+    <rect x="166" y="88" width="34" height="18" rx="3"/>
+    <rect x="210" y="88" width="34" height="18" rx="3"/>
+    <rect x="78" y="116" width="34" height="18" rx="3"/>
+    <rect x="122" y="116" width="34" height="18" rx="3"/>
+    <rect x="166" y="116" width="34" height="18" rx="3"/>
+    <rect x="210" y="116" width="34" height="18" rx="3"/>
+
+    <rect x="350" y="88" width="34" height="18" rx="3"/>
+    <rect x="394" y="88" width="34" height="18" rx="3"/>
+    <rect x="438" y="88" width="34" height="18" rx="3"/>
+    <rect x="482" y="88" width="34" height="18" rx="3"/>
+    <rect x="350" y="116" width="34" height="18" rx="3"/>
+    <rect x="394" y="116" width="34" height="18" rx="3"/>
+    <rect x="438" y="116" width="34" height="18" rx="3"/>
+    <rect x="482" y="116" width="34" height="18" rx="3"/>
+
+    <rect x="622" y="88" width="34" height="18" rx="3"/>
+    <rect x="666" y="88" width="34" height="18" rx="3"/>
+    <rect x="710" y="88" width="34" height="18" rx="3"/>
+    <rect x="754" y="88" width="34" height="18" rx="3"/>
+    <rect x="622" y="116" width="34" height="18" rx="3"/>
+    <rect x="666" y="116" width="34" height="18" rx="3"/>
+    <rect x="710" y="116" width="34" height="18" rx="3"/>
+    <rect x="754" y="116" width="34" height="18" rx="3"/>
+
+    <rect x="78" y="420" width="34" height="18" rx="3"/>
+    <rect x="122" y="420" width="34" height="18" rx="3"/>
+    <rect x="166" y="420" width="34" height="18" rx="3"/>
+    <rect x="210" y="420" width="34" height="18" rx="3"/>
+    <rect x="622" y="420" width="34" height="18" rx="3"/>
+    <rect x="666" y="420" width="34" height="18" rx="3"/>
+    <rect x="710" y="420" width="34" height="18" rx="3"/>
+    <rect x="754" y="420" width="34" height="18" rx="3"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#64748B">
+    <text x="70" y="220">ZONE A</text>
+    <text x="342" y="220">ZONE B</text>
+    <text x="614" y="220">ZONE C</text>
+    <text x="70" y="464">ZONE D</text>
+    <text x="342" y="464">ZONE E</text>
+    <text x="614" y="464">ZONE F</text>
+  </g>
+
+  <g font-family="Arial, sans-serif" filter="url(#softShadow)">
+    <g transform="translate(84 164)">
+      <rect width="132" height="72" rx="8" fill="#16A34A"/>
+      <text x="14" y="25" fill="white" font-size="17" font-weight="800">AA-01</text>
+      <text x="14" y="52" fill="#DCFCE7" font-size="13" font-weight="700">Output</text>
+      <text x="78" y="52" fill="white" font-size="24" font-weight="800">151</text>
+    </g>
+    <g transform="translate(236 164)">
+      <rect width="132" height="72" rx="8" fill="#EAB308"/>
+      <text x="14" y="25" fill="white" font-size="17" font-weight="800">AA-02</text>
+      <text x="14" y="52" fill="#FEF9C3" font-size="13" font-weight="700">Output</text>
+      <text x="78" y="52" fill="white" font-size="24" font-weight="800">247</text>
+    </g>
+    <g transform="translate(390 150)">
+      <rect width="132" height="72" rx="8" fill="#DC2626"/>
+      <text x="14" y="25" fill="white" font-size="17" font-weight="800">AB-01</text>
+      <text x="14" y="52" fill="#FEE2E2" font-size="13" font-weight="700">Output</text>
+      <text x="78" y="52" fill="white" font-size="24" font-weight="800">99</text>
+    </g>
+    <g transform="translate(640 164)">
+      <rect width="132" height="72" rx="8" fill="#16A34A"/>
+      <text x="14" y="25" fill="white" font-size="17" font-weight="800">AC-01</text>
+      <text x="14" y="52" fill="#DCFCE7" font-size="13" font-weight="700">Output</text>
+      <text x="78" y="52" fill="white" font-size="24" font-weight="800">96</text>
+    </g>
+    <g transform="translate(104 318)">
+      <rect width="132" height="72" rx="8" fill="#16A34A"/>
+      <text x="14" y="25" fill="white" font-size="17" font-weight="800">AD-01</text>
+      <text x="14" y="52" fill="#DCFCE7" font-size="13" font-weight="700">Output</text>
+      <text x="78" y="52" fill="white" font-size="24" font-weight="800">228</text>
+    </g>
+    <g transform="translate(372 318)">
+      <rect width="132" height="72" rx="8" fill="#DC2626"/>
+      <text x="14" y="25" fill="white" font-size="17" font-weight="800">AE-01</text>
+      <text x="14" y="52" fill="#FEE2E2" font-size="13" font-weight="700">Output</text>
+      <text x="78" y="52" fill="white" font-size="24" font-weight="800">48</text>
+    </g>
+    <g transform="translate(650 318)">
+      <rect width="132" height="72" rx="8" fill="#EAB308"/>
+      <text x="14" y="25" fill="white" font-size="17" font-weight="800">AF-01</text>
+      <text x="14" y="52" fill="#FEF9C3" font-size="13" font-weight="700">Output</text>
+      <text x="78" y="52" fill="white" font-size="24" font-weight="800">112</text>
+    </g>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="12" font-weight="700">
+    <rect x="54" y="504" width="12" height="12" rx="2" fill="#16A34A"/>
+    <text x="74" y="514" fill="#475569">Running</text>
+    <rect x="150" y="504" width="12" height="12" rx="2" fill="#EAB308"/>
+    <text x="170" y="514" fill="#475569">Warning</text>
+    <rect x="250" y="504" width="12" height="12" rx="2" fill="#DC2626"/>
+    <text x="270" y="514" fill="#475569">Alarm</text>
+  </g>
+</svg>

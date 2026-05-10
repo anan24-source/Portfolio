@@ -1,11 +1,45 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { ArrowDown, Mail } from 'lucide-react'
+import { ArrowDown, Briefcase, CircleDollarSign, Code2, Mail, Network, TimerReset } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa6'
 import styles from './Hero.module.css'
+import { useLanguage } from '@/lib/language'
+
+const copy = {
+  en: {
+    badge: 'Available for opportunities',
+    role: 'Software Systems Engineer',
+    analyst: 'Local Infrastructure Engineer',
+    subtitleStart: '8+ years bridging Manufacturing Production with Digital Transformation.',
+    viewWork: 'View My Work',
+    contact: 'Get In Touch',
+    scroll: 'Scroll down',
+    impact: [
+      { value: '8+ years', label: 'Professional experience', icon: Briefcase },
+      { value: '3,000,000 THB', label: 'Cost reduction per year', icon: CircleDollarSign },
+      { value: '10+', label: 'Work time reduction per year', icon: TimerReset },
+    ],
+  },
+  th: {
+    badge: 'เปิดรับโอกาสใหม่',
+    role: 'Software Systems Engineer',
+    analyst: 'Local Infrastructure Engineer',
+    subtitleStart: 'ประสบการณ์ในการเชื่อม Production Factory เข้ากับ Digital Transformation.',
+    viewWork: 'ดูผลงาน',
+    contact: 'ติดต่อ',
+    scroll: 'เลื่อนลง',
+    impact: [
+      { value: '8+ ปี', label: 'ประสบการณ์ทำงาน', icon: Briefcase },
+      { value: '3,000,000 THB', label: 'ลดค่าใช้จ่ายต่อปี', icon: CircleDollarSign },
+      { value: 'ลดคน', label: '10 คน/ปี', icon: TimerReset },
+    ],
+  },
+}
 
 export default function Hero() {
+  const { language } = useLanguage()
+  const t = copy[language]
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -15,7 +49,7 @@ export default function Hero() {
     if (!ctx) return
 
     const resize = () => {
-      canvas.width  = window.innerWidth
+      canvas.width = window.innerWidth
       canvas.height = window.innerHeight
     }
     resize()
@@ -50,7 +84,6 @@ export default function Hero() {
         ctx.fill()
       })
 
-      // Connect nearby particles
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x
@@ -84,14 +117,13 @@ export default function Hero() {
     <section id="home" className={styles.hero}>
       <canvas ref={canvasRef} className={styles.canvas} aria-hidden="true" />
 
-      {/* Gradient orbs */}
       <div className={styles.orb1} aria-hidden="true" />
       <div className={styles.orb2} aria-hidden="true" />
 
       <div className={`${styles.content} container`}>
         <div className={styles.badge}>
           <span className={styles.badgeDot} />
-          Available for opportunities
+          {t.badge}
         </div>
 
         <h1 className={styles.name}>
@@ -99,22 +131,43 @@ export default function Hero() {
           <span className={`${styles.nameLine2} gradient-text`}>Treemanee</span>
         </h1>
 
-        <p className={styles.title}>
-          Senior IT Specialist <span className={styles.separator}>|</span> System Analyst
-        </p>
+        <div className={styles.roleBadges} aria-label={`${t.role} and ${t.analyst}`}>
+          <span className={`${styles.roleBadge} ${styles.softwareBadge}`}>
+            <Code2 size={18} />
+            {t.role}
+          </span>
+          <span className={styles.roleConnector} aria-hidden="true" />
+          <span className={`${styles.roleBadge} ${styles.infrastructureBadge}`}>
+            <Network size={18} />
+            {t.analyst}
+          </span>
+        </div>
 
         <p className={styles.subtitle}>
-          7+ years bridging Manufacturing Production with Digital Transformation.<br />
-          Reduced operational costs by <strong className={styles.highlight}>3,000,000 THB</strong> annually.
+          <span className={styles.subtitleLead}>{t.subtitleStart}</span>
         </p>
+
+        <div className={styles.impactGrid} aria-label="Key impact metrics">
+          {t.impact.map(item => {
+            const Icon = item.icon
+
+            return (
+              <div className={styles.impactCard} key={item.label}>
+                <Icon size={18} />
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            )
+          })}
+        </div>
 
         <div className={styles.ctas}>
           <a href="#projects" className="btn-primary" onClick={e => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }) }}>
-            View My Work
+            {t.viewWork}
             <ArrowDown size={16} />
           </a>
           <a href="#contact" className="btn-outline" onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }}>
-            Get In Touch
+            {t.contact}
           </a>
         </div>
 
@@ -131,7 +184,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <button className={styles.scrollDown} onClick={scrollToAbout} aria-label="Scroll down">
+      <button className={styles.scrollDown} onClick={scrollToAbout} aria-label={t.scroll}>
         <div className={styles.scrollMouse}>
           <div className={styles.scrollWheel} />
         </div>
