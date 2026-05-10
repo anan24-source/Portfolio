@@ -40,10 +40,10 @@ export default function Contact() {
         <div className={styles.header}>
           <p className="section-label fade-up">Get in touch</p>
           <h2 className="section-title fade-up fade-up-delay-1">
-            Let's <span className="gradient-text">Connect</span>
+            Let&apos;s <span className="gradient-text">Connect</span>
           </h2>
           <p className={`${styles.subtitle} fade-up fade-up-delay-2`}>
-            Currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            Currently open to new opportunities. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
           </p>
         </div>
 

@@ -1,10 +1,11 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, Folder } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa6'
 import styles from './Projects.module.css'
 import { Project } from '@/lib/supabase'
+import MMSShowcase from './MMSShowcase'
 
 interface ProjectsProps {
   initialProjects: Project[]
@@ -24,18 +25,6 @@ const fallbackProjects: Project[] = [
     created_at: new Date().toISOString(),
   },
   {
-    id: '2',
-    title: 'Machine Monitoring System (MMS)',
-    description: 'Integrated real-time data from CNC Machines and Automation PLCs. Provides live dashboards for production monitoring and OEE calculation.',
-    tech_stack: ['Java', 'PLC', 'SQL Server'],
-    image_url: null,
-    github_url: null,
-    live_url: null,
-    featured: true,
-    sort_order: 2,
-    created_at: new Date().toISOString(),
-  },
-  {
     id: '3',
     title: 'AS400 API Integration',
     description: 'Developed API integration for legacy AS400 systems to streamline data input processes, improving overall workflow efficiency by 40%.',
@@ -46,7 +35,7 @@ const fallbackProjects: Project[] = [
     featured: false,
     sort_order: 3,
     created_at: new Date().toISOString(),
-  }
+  },
 ]
 
 export default function Projects({ initialProjects }: ProjectsProps) {
@@ -62,7 +51,7 @@ export default function Projects({ initialProjects }: ProjectsProps) {
           }
         })
       },
-      { threshold: 0.1 }
+      { threshold: 0.05 }
     )
     if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
@@ -78,12 +67,20 @@ export default function Projects({ initialProjects }: ProjectsProps) {
           </h2>
         </div>
 
+        <div className="fade-up fade-up-delay-2">
+          <MMSShowcase />
+        </div>
+
+        <div className={styles.otherHeader}>
+          <h3 className={`${styles.otherTitle} fade-up`}>Other Projects</h3>
+        </div>
+
         <div className={styles.grid}>
           {projects.map((project, i) => (
             <div key={project.id} className={`glass-card ${styles.card} fade-up`} style={{ transitionDelay: `${i * 150}ms` }}>
               <div className={styles.cardContent}>
                 <div className={styles.top}>
-                  <div className={styles.folderIcon}>📁</div>
+                  <div className={styles.folderIcon}><Folder size={34} /></div>
                   <div className={styles.links}>
                     {project.github_url && (
                       <a href={project.github_url} target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="GitHub">

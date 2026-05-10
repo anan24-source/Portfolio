@@ -1,0 +1,656 @@
+.showcase {
+  position: relative;
+  display: grid;
+  gap: 48px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 32px;
+  align-items: end;
+  padding: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(0, 194, 255, 0.08), rgba(124, 58, 237, 0.06)),
+    rgba(13, 21, 38, 0.72);
+}
+
+.kicker,
+.stepLabel {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-accent-primary);
+}
+
+.title {
+  margin-top: 8px;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 700;
+}
+
+.subtitle {
+  max-width: 760px;
+  margin-top: 14px;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.heroMetrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.heroMetrics div,
+.problemCard,
+.resultCard,
+.issueCard,
+.networkPanel,
+.upgradePanel,
+.skillPanel,
+.imageFrame {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(10, 15, 30, 0.58);
+}
+
+.heroMetrics div {
+  padding: 20px 16px;
+}
+
+.heroMetrics strong,
+.metricRow span,
+.outcomeStack strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+}
+
+.heroMetrics span,
+.metricRow small,
+.outcomeStack span {
+  display: block;
+  margin-top: 6px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.checkpoint {
+  position: relative;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 24px;
+}
+
+.checkpoint::before {
+  content: '';
+  position: absolute;
+  top: 58px;
+  bottom: -50px;
+  left: 35px;
+  width: 1px;
+  background: linear-gradient(var(--color-border-hover), transparent);
+}
+
+.checkpoint:last-child::before {
+  display: none;
+}
+
+.checkpointMarker {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.checkpointMarker span {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border: 1px solid var(--color-border-hover);
+  border-radius: 50%;
+  background: var(--color-bg-secondary);
+  color: var(--color-accent-primary);
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: var(--glow-primary);
+}
+
+.checkpointBody {
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+}
+
+.checkpointHeader {
+  max-width: 880px;
+}
+
+.checkpointHeader h4 {
+  margin-top: 8px;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+}
+
+.checkpointHeader p:last-child {
+  margin-top: 12px;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.beforeAfterGrid,
+.issueGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.problemCard,
+.resultCard,
+.issueCard {
+  padding: 24px;
+}
+
+.problemCard {
+  border-color: rgba(248, 113, 113, 0.22);
+  background: rgba(127, 29, 29, 0.12);
+}
+
+.resultCard {
+  border-color: rgba(34, 197, 94, 0.24);
+  background: rgba(20, 83, 45, 0.12);
+}
+
+.skillIcon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  color: var(--color-accent-primary);
+  background: rgba(0, 194, 255, 0.1);
+}
+
+.storyImage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 18px;
+  border: 1px solid rgba(0, 194, 255, 0.14);
+  border-radius: var(--radius-md);
+  background: rgba(10, 15, 30, 0.46);
+}
+
+.storyImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.problemCard h5,
+.resultCard h5,
+.issueCard h5,
+.networkCopy h5,
+.upgradeText h5,
+.skillPanel h5 {
+  margin-top: 16px;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.problemCard p,
+.resultCard p,
+.issueCard p,
+.networkCopy p,
+.skillItem p,
+.upgradeText p,
+.imageFrame figcaption {
+  margin-top: 10px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.metricRow {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+}
+
+.networkPanel,
+.upgradePanel {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 24px;
+  align-items: center;
+  padding: 28px;
+}
+
+.networkCopy h5,
+.upgradeText h5,
+.skillPanel h5 {
+  margin-top: 0;
+}
+
+.topology {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  padding: 10px 0 2px;
+}
+
+.serverLayer,
+.collectorLayer,
+.machineLayer {
+  position: relative;
+  z-index: 1;
+}
+
+.serverLayer {
+  display: flex;
+  justify-content: center;
+}
+
+.topologyNode,
+.machineNode {
+  border: 1px solid rgba(0, 194, 255, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(17, 26, 48, 0.78);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+}
+
+.topologyNode {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 280px);
+  min-height: 118px;
+  padding: 18px;
+  text-align: center;
+}
+
+.topologyNode svg,
+.machineNode svg {
+  color: var(--color-accent-primary);
+}
+
+.topologyNode strong,
+.topologyNode span,
+.machineNode span {
+  display: block;
+}
+
+.topologyNode strong {
+  margin-top: 10px;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.topologyNode span {
+  max-width: 220px;
+  margin-top: 5px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.serverNode {
+  border-color: rgba(34, 197, 94, 0.24);
+  background:
+    linear-gradient(180deg, rgba(34, 197, 94, 0.1), rgba(17, 26, 48, 0.78)),
+    rgba(17, 26, 48, 0.78);
+}
+
+.collectorNode {
+  border-color: rgba(0, 194, 255, 0.24);
+}
+
+.collectorLayer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.collectorBranch {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.collectorBranch::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  width: 1px;
+  height: 16px;
+  background: var(--color-accent-primary);
+  opacity: 0.76;
+}
+
+.collectorSummary {
+  margin: -8px 0 -2px;
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.lanDrop {
+  position: relative;
+  display: grid;
+  height: 34px;
+  place-items: end center;
+  color: var(--color-accent-primary);
+  font-family: var(--font-heading);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.lanDrop::before,
+.lanDrop::after {
+  content: '';
+  position: absolute;
+  background: var(--color-accent-primary);
+  opacity: 0.76;
+}
+
+.lanDrop::before {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 20px;
+}
+
+.lanDrop::after {
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 1px;
+}
+
+.lanDrop span {
+  padding: 2px 8px;
+  border: 1px solid rgba(0, 194, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(10, 15, 30, 0.92);
+}
+
+.machineLayer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.machineGroup {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding-top: 24px;
+}
+
+.machineGroup::before,
+.machineGroup::after {
+  content: '';
+  position: absolute;
+  background: var(--color-accent-primary);
+  opacity: 0.76;
+}
+
+.machineGroup::before {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 24px;
+}
+
+.machineGroup::after {
+  top: 12px;
+  left: 16%;
+  width: 68%;
+  height: 1px;
+}
+
+.machineNode {
+  position: relative;
+  display: grid;
+  min-height: 72px;
+  place-items: center;
+  padding: 12px 6px;
+  text-align: center;
+}
+
+.machineNode::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 1px;
+  height: 12px;
+  background: var(--color-accent-primary);
+  opacity: 0.76;
+}
+
+.machineNode span {
+  margin-top: 6px;
+  color: var(--color-text-secondary);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.visualGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 0.9fr;
+  gap: 20px;
+}
+
+.imageFrame {
+  overflow: hidden;
+}
+
+.imageFrame img {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+}
+
+.imageFrame figcaption {
+  margin: 0;
+  padding: 14px 16px;
+  border-top: 1px solid var(--color-border);
+  background: rgba(10, 15, 30, 0.82);
+  font-family: var(--font-heading);
+  font-size: 12px;
+}
+
+.skillPanel {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  padding: 24px;
+}
+
+.skillItem {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 14px;
+}
+
+.skillItem strong {
+  display: block;
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: 15px;
+}
+
+.skillItem p {
+  margin-top: 5px;
+}
+
+.issueCard svg {
+  color: #f59e0b;
+}
+
+.issueCard span {
+  display: inline-flex;
+  margin-top: 16px;
+  padding: 7px 10px;
+  border: 1px solid rgba(245, 158, 11, 0.26);
+  border-radius: var(--radius-sm);
+  color: #fbbf24;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.upgradePanel {
+  grid-template-columns: minmax(0, 1fr) 320px;
+  border-color: rgba(34, 197, 94, 0.22);
+  background:
+    linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(0, 194, 255, 0.05)),
+    rgba(10, 15, 30, 0.58);
+}
+
+.resultList {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.resultList div {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.resultList svg {
+  color: #22c55e;
+  margin-top: 3px;
+}
+
+.outcomeStack {
+  display: grid;
+  gap: 12px;
+}
+
+.outcomeStack div {
+  padding: 18px;
+  border: 1px solid rgba(34, 197, 94, 0.24);
+  border-radius: var(--radius-md);
+  background: rgba(20, 83, 45, 0.16);
+}
+
+.commandFlow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px;
+  padding: 14px;
+  border: 1px dashed var(--color-border-hover);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-family: var(--font-heading);
+  font-size: 12px;
+}
+
+.commandFlow svg {
+  color: var(--color-accent-primary);
+  flex: 0 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .networkPanel,
+  .upgradePanel,
+  .visualGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroMetrics,
+  .outcomeStack {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .showcase {
+    gap: 36px;
+  }
+
+  .hero,
+  .networkPanel,
+  .upgradePanel {
+    padding: 22px;
+  }
+
+  .checkpoint {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .checkpoint::before {
+    display: none;
+  }
+
+  .checkpointMarker {
+    justify-content: flex-start;
+  }
+
+  .checkpointMarker span {
+    width: 56px;
+    height: 56px;
+    font-size: 16px;
+  }
+
+  .beforeAfterGrid,
+  .issueGrid,
+  .heroMetrics,
+  .outcomeStack {
+    grid-template-columns: 1fr;
+  }
+
+  .collectorLayer,
+  .machineLayer {
+    grid-template-columns: 1fr;
+  }
+
+  .lanDrop::after {
+    left: 50%;
+    width: 1px;
+    height: 100%;
+  }
+
+  .collectorBranch::before {
+    display: none;
+  }
+
+  .machineGroup {
+    gap: 10px;
+  }
+
+  .imageFrame img {
+    min-height: 240px;
+  }
+}

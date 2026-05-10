@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './Skills.module.css'
 
 type Skill = { name: string; level: number; icon: string }
@@ -57,6 +57,7 @@ function SkillBar({ skill, visible }: { skill: Skill; visible: boolean }) {
 export default function Skills() {
   const sectionRef = useRef<HTMLElement>(null)
   const barsRef    = useRef<boolean>(false)
+  const [barsVisible, setBarsVisible] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -64,11 +65,8 @@ export default function Skills() {
         entries.forEach(e => {
           if (e.isIntersecting && !barsRef.current) {
             barsRef.current = true
+            setBarsVisible(true)
             e.target.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'))
-            // Trigger bar animations
-            sectionRef.current?.querySelectorAll('[data-bar]').forEach(el => {
-              ;(el as HTMLElement).style.width = (el as HTMLElement).dataset.bar!
-            })
           }
         })
       },
@@ -99,8 +97,8 @@ export default function Skills() {
                 {cat.title}
               </div>
               <div className={styles.skillList}>
-                {cat.skills.map((skill, si) => (
-                  <SkillBar key={skill.name} skill={skill} visible={barsRef.current} />
+                {cat.skills.map(skill => (
+                  <SkillBar key={skill.name} skill={skill} visible={barsVisible} />
                 ))}
               </div>
             </div>
