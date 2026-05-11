@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Anantachai Treemanee | Software Systems Engineer & Local Infrastructure Engineer',
   description:
-    'Portfolio of Anantachai Treemanee — Software Systems Engineer and Local Infrastructure Engineer with 8+ years in Manufacturing IT and Digital Transformation. Reduced company costs by 3M+ THB annually.',
+    'Portfolio of Anantachai Treemanee - Software Systems Engineer and Local Infrastructure Engineer with 8+ years in Manufacturing IT and Digital Transformation. Reduced company costs by 3M+ THB annually.',
   keywords: [
     'IT Specialist',
     'Local Infrastructure Engineer',
@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     'Production Div.',
   ],
   authors: [{ name: 'Anantachai Treemanee' }],
+  icons: {
+    icon: '/icon.svg',
+  },
   openGraph: {
     title: 'Anantachai Treemanee | Software Systems Engineer & Local Infrastructure Engineer',
     description:

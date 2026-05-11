@@ -192,6 +192,17 @@
   white-space: nowrap;
 }
 
+.smartFactory {
+  width: fit-content;
+  margin: -6px auto 24px;
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0;
+  animation: fadeInDown 0.7s ease 0.58s both;
+}
+
 .highlight {
   color: var(--color-accent-primary);
   font-weight: 700;
@@ -360,6 +371,10 @@
 
   .subtitleLead {
     white-space: normal;
+  }
+
+  .smartFactory {
+    margin-top: -2px;
   }
 
   .roleBadges {

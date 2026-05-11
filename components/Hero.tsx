@@ -11,14 +11,15 @@ const copy = {
     badge: 'Available for opportunities',
     role: 'Software Systems Engineer',
     analyst: 'Local Infrastructure Engineer',
-    subtitleStart: '8+ years bridging Manufacturing Production with Digital Transformation.',
+    subtitleStart: 'Bridging Manufacturing Production with Digital Transformation.',
+    smartFactory: 'Smart Factory',
     viewWork: 'View My Work',
     contact: 'Get In Touch',
     scroll: 'Scroll down',
     impact: [
       { value: '8+ years', label: 'Professional experience', icon: Briefcase },
       { value: '3,000,000 THB', label: 'Cost reduction per year', icon: CircleDollarSign },
-      { value: '10+', label: 'Work time reduction per year', icon: TimerReset },
+      { value: '10+', label: 'Manpower reduction per year', icon: TimerReset },
     ],
   },
   th: {
@@ -26,13 +27,14 @@ const copy = {
     role: 'Software Systems Engineer',
     analyst: 'Local Infrastructure Engineer',
     subtitleStart: 'ประสบการณ์ในการเชื่อม Production Factory เข้ากับ Digital Transformation.',
+    smartFactory: 'Smart Factory',
     viewWork: 'ดูผลงาน',
     contact: 'ติดต่อ',
     scroll: 'เลื่อนลง',
     impact: [
       { value: '8+ ปี', label: 'ประสบการณ์ทำงาน', icon: Briefcase },
       { value: '3,000,000 THB', label: 'ลดค่าใช้จ่ายต่อปี', icon: CircleDollarSign },
-      { value: 'ลดคน', label: '10 คน/ปี', icon: TimerReset },
+      { value: '10+', label: 'ลดคนต่อปี', icon: TimerReset },
     ],
   },
 }
@@ -146,6 +148,10 @@ export default function Hero() {
         <p className={styles.subtitle}>
           <span className={styles.subtitleLead}>{t.subtitleStart}</span>
         </p>
+
+        <div className={`${styles.smartFactory} gradient-text`}>
+          {t.smartFactory}
+        </div>
 
         <div className={styles.impactGrid} aria-label="Key impact metrics">
           {t.impact.map(item => {

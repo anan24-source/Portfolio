@@ -55,7 +55,7 @@ const copy: Record<'en' | 'th', AboutCopy> = {
       {
         icon: BrainCircuit,
         title: 'Growth Mindset',
-        text: 'I keep improving myself across IT, production systems, communication, and modern AI-assisted development workflows.',
+        text: 'I keep improving myself across IT, production systems, communication, asset management, and modern AI-assisted development workflows.',
       },
       {
         icon: BookOpenCheck,
@@ -106,7 +106,7 @@ const copy: Record<'en' | 'th', AboutCopy> = {
       {
         icon: BrainCircuit,
         title: 'Growth Mindset',
-        text: 'พัฒนาตัวเองต่อเนื่องทั้งด้าน IT, ระบบโรงงาน, การสื่อสาร และการใช้ AI ช่วยงานพัฒนาโปรแกรม',
+        text: 'พัฒนาตัวเองต่อเนื่องทั้งด้าน IT, ระบบโรงงาน, การสื่อสาร, การบริหารสินทรัพย์ และการใช้ AI ช่วยงานพัฒนาโปรแกรม',
       },
       {
         icon: BookOpenCheck,
