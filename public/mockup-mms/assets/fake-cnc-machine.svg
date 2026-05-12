@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Fake CNC machine preview</title>
+  <desc id="desc">A stylized mock CNC machine in a dark smart factory style.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.55" stop-color="#0d1a30"/>
+      <stop offset="1" stop-color="#10122a"/>
+    </linearGradient>
+    <linearGradient id="machine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f3557"/>
+      <stop offset="1" stop-color="#0d1729"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00c2ff"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <g opacity="0.22" stroke="#00c2ff" stroke-width="1">
+    <path d="M0 90h960M0 180h960M0 270h960M0 360h960M0 450h960"/>
+    <path d="M120 0v540M240 0v540M360 0v540M480 0v540M600 0v540M720 0v540M840 0v540"/>
+  </g>
+  <path d="M120 432h710" stroke="#00c2ff" stroke-width="3" opacity="0.42"/>
+  <g filter="url(#glow)" opacity="0.88">
+    <circle cx="760" cy="130" r="5" fill="#22c55e"/>
+    <circle cx="788" cy="130" r="5" fill="#facc15"/>
+    <circle cx="816" cy="130" r="5" fill="#fb4d55"/>
+  </g>
+  <g transform="translate(138 108)">
+    <path d="M80 84h498c35 0 64 29 64 64v190H24V140c0-31 25-56 56-56Z" fill="url(#machine)" stroke="#1a9fd2" stroke-width="3"/>
+    <path d="M70 132h302v158H70z" fill="#07111f" stroke="#00c2ff" stroke-width="3"/>
+    <path d="M94 154h254v114H94z" fill="#0f2139"/>
+    <path d="M406 132h176v158H406z" fill="#101a2f" stroke="#3b82f6" stroke-width="2"/>
+    <path d="M430 154h128M430 184h128M430 214h92" stroke="#8b9cc8" stroke-width="8" stroke-linecap="round"/>
+    <path d="M102 318h454" stroke="#00c2ff" stroke-width="4" opacity="0.65"/>
+    <rect x="112" y="336" width="106" height="44" rx="10" fill="#10284a" stroke="#00c2ff"/>
+    <rect x="238" y="336" width="106" height="44" rx="10" fill="#10284a" stroke="#7c3aed"/>
+    <rect x="364" y="336" width="106" height="44" rx="10" fill="#10284a" stroke="#22c55e"/>
+    <circle cx="609" cy="168" r="16" fill="#22c55e"/>
+    <circle cx="609" cy="220" r="16" fill="#fb4d55"/>
+    <path d="M6 338h660v42c0 22-18 40-40 40H46c-22 0-40-18-40-40z" fill="#070d18" stroke="#1a9fd2" stroke-width="3"/>
+  </g>
+  <g transform="translate(142 468)" fill="#8b9cc8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">
+    <text x="0" y="0">CNC MACHINE MOCKUP</text>
+    <text x="650" y="0" text-anchor="end" fill="#00c2ff">MMS READY</text>
+  </g>
+</svg>
