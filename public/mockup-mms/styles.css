@@ -1281,11 +1281,6 @@ button {
   stroke-width: 2.4;
 }
 
-.toast.is-start .toast-icon svg {
-  fill: currentColor;
-  stroke: none;
-}
-
 .toast-panel strong {
   display: block;
   margin-top: 20px;

@@ -709,9 +709,12 @@ const pcActionFeedback = {
 
 function successIcon(action) {
   const icons = {
-    start: '<path d="M8 5v14l11-7-11-7Z"></path>',
-    stop: '<rect x="6" y="6" width="12" height="12" rx="2"></rect>',
-    update: '<path d="M21 12a9 9 0 1 1-2.64-6.36"></path><path d="M21 3v6h-6"></path>',
+    start:
+      '<rect x="3.5" y="7" width="17" height="10" rx="5"></rect><circle cx="15.5" cy="12" r="3.1"></circle><path d="M7.5 12h3"></path>',
+    stop:
+      '<rect x="3.5" y="7" width="17" height="10" rx="5"></rect><circle cx="8.5" cy="12" r="3.1"></circle><path d="M14 12h2.5"></path>',
+    update:
+      '<path d="M12 15V4"></path><path d="m7.5 8.5 4.5-4.5 4.5 4.5"></path><path d="M5 15v3.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V15"></path><path d="M8 16h8"></path>',
   };
 
   return `
